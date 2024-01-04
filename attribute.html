@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .wrapper{
+            width:600px;
+            margin: 0 auto;
+            text-align: center;
+            color: orangered;
+            background-color: khaki;
+        }
+    </style>
+    <script>
+        $(function(){
+            const imageElement = $('<img />');
+            $('button').eq(0).click(function(){
+                //$('div').attr('class','wrapper');
+             
+              /* imageElement.attr('src','daffodil.png').attr('id','image1'); */
+              //imageElement.attr({src:'daffodil.png',id:'image1'});
+               const attrValue = {
+                src:'daffodil.png',
+                id:'image1',
+                style:'border:3px solid red'
+               };
+               imageElement.attr(attrValue);
+              //$('div').append(imageElement).attr('class','wrapper');
+              //$('div').append(imageElement).addClass('wrapper');
+             // $('div').append(imageElement).addClass('wrapper');
+              $('div').append(imageElement).toggleClass('wrapper');
+              console.log($('div').attr('class'));
+                
+            });
+
+            $('button').eq(1).click(function(){
+                 imageElement.removeAttr('style');
+
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias porro cumque culpa quis eveniet laborum laudantium voluptate omnis rem eaque, placeat, consequuntur recusandae iure assumenda sit numquam dignissimos nostrum! Adipisci, eaque numquam vel repellat, odio corrupti illum eligendi ex voluptate officia velit laborum cupiditate eveniet itaque dolor sint maxime aliquam?</p>
+        <button>Add Class Attribute</button>
+        <button>Remove Attributes</button>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+       $(function(){
+        $('#btn1').click(function(){
+           const divElement = $('<div />').css('border','2px solid red');
+          // $('p').wrap(divElement);
+         // $('p').wrapAll(divElement);
+         $('p').wrapAll(divElement);
+        });
+
+        $('#btn2').click(function(){
+          $('p').unwrap();
+        })
+       })
+    </script>
+</head>
+<body>
+    <p>one</p>
+    <p>two</p>
+    <p>three</p>
+    <p>four</p>
+    <button id="btn1">Add Parent</button>
+    <button id="btn2">Remove Parent</button>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+       /*  window.onload = function(){
+            const para = document.getElementsByTagName('p');
+    for(let i of para){
+        i.style.color = 'red';
+    } 
+} */
+
+/* $(document).ready(function(){
+ $('.paratwo').css('color','red');
+}); */
+var jq = jQuery.noConflict();
+jq.holdReady(true);
+jq(function(){
+    //jq('.paratwo').css('color','red');
+    //jq('p:eq(2)').css('color','red');
+    jq('p:gt(0)').css('color','red');
+});
+
+setTimeout(function(){
+   console.log('Releasing the hold..');
+   jq.holdReady(false);
+},2000)
+    </script>
+</head>
+<body>
+   <p>one</p>
+   <p>two</p>
+   <p>three</p>
+   <p>four</p>
+   <script>
+ 
+
+   // $('p').css('color','red');
+   </script>
+</body>
+</html>

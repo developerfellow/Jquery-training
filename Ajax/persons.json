@@ -1,0 +1,76 @@
+{
+    "persons": [
+      {
+        "fname": "Ayan",
+        "lname": "Chakraborty",
+        "address": "Meenakshi Towers Hyderbad",
+        "city": "Hyderbad",
+        "state": "Telangana",
+        "country": "India"
+      },
+      {
+        "fname": "Romik",
+        "lname": "Bhattacharjee",
+        "address": "Meenakshi Towers Hyderbad",
+        "city": "Hyderbad",
+        "state": "Telangana",
+        "country": "India"
+      },
+      {
+        "fname": "Abhitha",
+        "lname": "Suggala",
+        "address": "Meenakshi Towers Hyderbad",
+        "city": "Hyderbad",
+        "state": "Telangana",
+        "country": "India"
+      },
+      {
+        "fname": "Abhiram",
+        "lname": "VS",
+        "address": "Meenakshi Towers Hyderbad",
+        "city": "Hyderbad",
+        "state": "Telangana",
+        "country": "India"
+      },
+      {
+        "fname": "Yash",
+        "lname": "Thakkar",
+        "address": "Softzone Towers Block A",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "country": "India"
+      },
+      {
+        "fname": "Sachin",
+        "lname": "Mani Tripathi",
+        "address": "Softzone Towers Block A",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "country": "India"
+      },
+      {
+        "fname": "Pranati",
+        "lname": "Tiwari",
+        "address": "Softzone Towers Block A",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "country": "India"
+      },
+      {
+        "fname": "Nshita",
+        "lname": "Harsh",
+        "address": "Softzone Towers Block A",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "country": "India"
+      },
+      {
+        "fname": "Navya",
+        "lname": "Simhadri",
+        "address": "Meenakshi Towers Hyderbad",
+        "city": "Hyderbad",
+        "state": "Telangana",
+        "country": "India"
+      }
+    ]
+  }

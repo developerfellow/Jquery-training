@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+           /*  $.get('persons.json',function(data){
+               //console.log(data);
+               $.each(data.persons,function(){
+                  var options = $(`<option value=${this.fname}>${this.fname} ${this.lname}</option>`);
+                  $('#names').append(options);
+               })
+            }); */
+
+            $.ajaxSetup({
+                url:'persons.json',
+                type:'get'
+            })
+
+            $.ajax({
+                /* url:'persons.json',
+                type:'get', */
+                success:function(data){
+                    $.each(data.persons,function(){
+                        var options = $(`<option value=${this.fname}>${this.fname} ${this.lname}</option>`);
+                       $('#names').append(options);
+                    })
+                },
+                error:function(){
+                    $('body').prepend(`<h1> Something Went Wrong </h1>`);
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <select id="names">
+      <option value="">Please select an option</option>
+    </select>
+</body>
+</html>

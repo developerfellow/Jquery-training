@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+           // $('img:odd').css('border','5px solid red');
+            //$('img:odd',$('.drow')).css('border','5px solid red');
+
+            //var elements = document.getElementsByTagName('img');
+             //console.log(elements);
+             //elements.css('border','3px solid red');
+            // $(elements).css('border','3px solid red');
+         // var elements = $('img:odd');
+         // console.log(elements);
+         /* for(let i of elements){
+            i.style.border = '3px solid red';
+         } */
+
+        // $('img:odd').css('border','2px solid red').add($('label').css('border','2px solid blue'));
+
+     /*    $('img:odd').css('border','2px solid red').add($('label').css('border','2px solid blue'));
+     
+ */
+  //expanding the selection
+  //var labelElements = document.getElementsByTagName('label');
+ // var jq = $('img[src*=daffodil]');
+  //$('img:even').add('img[src*=primula]').add(jq)
+   //.add(labelElements).css('border','3px solid red');
+
+  // $('img:even').add($('label')).add($(':text')).css('border','3px solid blue');
+
+  //narrowing the selection
+
+  //$('img').first().css('border','2px solid blue');
+ // $('img').last().css('border','2px solid blue');
+ //$('img').eq(2).css('border','2px solid blue');
+ //$('img').eq(-2).css('border','2px solid blue');
+ //$('img').slice(0,2).css('border','2px solid blue');
+ //$('img').slice(0).css('border','2px solid blue');
+ //var jq = jQuery.noConflict();
+ //$('img').filter('[src*=r]').css('border','3px solid red');
+ //$('img').not('[src*=r]').css('border','3px solid red');
+
+//  $('div.dcell').has('img[src*=aster]').css('border','2px solid red');
+
+//$('label').first().css('border','5px solid blue').end().css('color','red');
+   /*  $('div.drow').children().each(function(index,elem){
+        console.log(elem.tagName);
+        console.log(elem.className);
+    }) */
+
+    //$('div.drow').children().css('border','3px solid red');
+
+    //$('div.drow').find('label').css('border','3px solid red');
+     // $('img').parent().css('border','3px solid red');
+
+    // $('form').parents().css('border','3px solid red');
+    //$('img').closest('form').css('border','3px solid red');
+    //$('img').parentsUntil('div.dtable').css('border','3px solid red');
+    //$('img').next().css('border','3px solid blue');
+    //$('img').nextAll('label').css('border','3px solid blue');
+    //$('img').nextUntil('input').css('border','3px solid blue');
+    //$('input').prevAll().css('border','2px solid blue');
+    //$('input').prevUntil('img').css('border','2px solid red');
+ /*    $('img[src*=aster],img[src*=primula]').parent().siblings().css('border','2px solid red'); */
+    var newElements = $('div.dcell').clone();
+       newElements.each(function(index,element){
+          console.log(`New Element: ${element.tagName} ${element.className}`);
+       })
+        });
+    </script>
+</head>
+<body>
+    <h1>Jacqui's Flower Shop</h1>
+    <form method="post">
+        <div id="oblock">        
+            <div class="dtable">
+                <div id="row1" class="drow">
+                    <div class="dcell">
+                        <img src="aster.png"/><label for="aster">Aster:</label>
+                        <input type="text" name="aster" value="0" required>
+                    </div>
+                    <div class="dcell">
+                        <img src="daffodil.png"/><label for="daffodil">Daffodil:</label>
+                        <input name="daffodil" value="0" required >
+                    </div>
+                    <div class="dcell">
+                        <img src="rose.png"/><label for="rose">Rose:</label>
+                        <input name="rose" value="0" required>
+                    </div>                
+                </div>
+                <div id="row2" class="drow">
+                    <div class="dcell">
+                        <img src="peony.png"/><label for="peony">Peony:</label>
+                        <input name="peony" value="0" required>
+                    </div>
+                    <div class="dcell">
+                        <img src="primula.png"/><label for="primula">Primula:</label>
+                        <input name="primula" value="0" required>
+                    </div>            
+                    <div class="dcell">
+                        <img src="snowdrop.png"/><label for="snowdrop">Snowdrop:</label>
+                        <input name="snowdrop" value="0" required>
+                    </div>            
+                </div>            
+            </div>
+        </div>
+        <div id="buttonDiv"><button type="submit">Place Order</button></div>                    
+    </form>
+</body>
+</html>

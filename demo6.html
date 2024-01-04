@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+         const newElement = $(`<div id="inner"></div>`);
+         const imageElement = $(`<img src="aster.png"/>`);
+         newElement.append(imageElement);
+         //$('#wrapper').after(newElement);
+         //$('#wrapper').before(newElement);
+        // newElement.insertAfter($('#wrapper'));
+        newElement.insertBefore($('#wrapper'));
+        });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, placeat!</p>
+    </div>
+</body>
+</html>

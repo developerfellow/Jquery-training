@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            //const para = $('<p>two</p>');
+            //const image = $(`<img src="aster.png"/>`);
+        //$('#wrapper').append(image);
+       // image.appendTo($('#wrapper'));
+       const element = $('#wrapper').clone();
+         //element.appendTo($('section').css('color','red'));
+        // $('section').prepend(element);
+       // element.prependTo($('section'));
+       $('#row1').append(element);
+      $('#row2').prepend(element.clone());
+        })
+       
+    </script>
+</head>
+<body>
+      <div id="wrapper">
+         <p>one</p>
+         <p>two</p>
+         <p>three</p>
+         <p>four</p>
+      </div>
+
+     <section id="row1">
+         <header>
+             <h1>Cloning Goes Here</h1>
+         </header>
+     </section>
+
+   <section id="row2">
+      <h1>New Cloning Goes Here</h1>
+   </section>
+</body>
+</html>
